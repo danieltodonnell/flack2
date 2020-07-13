@@ -1,19 +1,25 @@
 import { Box } from "@chakra-ui/core";
 import { Grid, Heading, Link, Flex, Stack } from "@chakra-ui/core";
-import Header from './header'
-import Footer from './footer'
+import Header from "./header";
+import Footer from "./footer";
 
 function Layout({ children }) {
-  
   return (
-    <Flex flexDirection="column">
-      <Flex flexDirection="column" bg="silver" alignItems="center">
-        <Header />
+    <Flex flexDirection="column" minH="100vh">
+      <Flex>
+        <Heading>Heading title</Heading>
       </Flex>
-      <Flex flexDirection="column" alignItems="center">
-        {children}
+      <Flex flex={1}>
+        <Flex flexDirection="column" flex="0 0 20vw" bg="tomato">
+          Side Menu
+        </Flex>
+        <Flex flexDirection="column" flex={1} bg="salmon">
+          {children}
+        </Flex>
       </Flex>
-      <Footer />
+      <Flex bg="grey">
+        Footer
+      </Flex>
     </Flex>
   );
 }

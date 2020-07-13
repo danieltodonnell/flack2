@@ -36,23 +36,6 @@ function Home(props) {
               <li key={item.id}>{item.name}</li>
             ))}
           <Button  onClick={onOpen} variantColor="green">Button</Button>
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            Here is your modal body
-          </ModalBody>
-
-          <ModalFooter>
-            <Button variantColor="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant="ghost">Secondary Action</Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
     </Layout>
   )
 }
